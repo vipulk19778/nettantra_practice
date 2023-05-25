@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Uploading Documents</header>
+
+      <form onsubmit="event.preventDefault()">
+        <div class="fileContainer">
+          <p class="fileText">
+            <span>Recent passport size photograph (image size 4MB)</span>
+          </p>
+          <input type="file" multiple />
+        </div>
+
+        <div class="fileContainer">
+          <p class="fileText">
+            <span>HSC mark sheet (image, PDF or docs size 4MB)</span>
+          </p>
+          <input type="file" multiple />
+        </div>
+
+        <div class="fileContainer">
+          <p class="fileText">
+            <span>SSC mark sheet (image, PDF or docs size 4MB)</span>
+          </p>
+          <input type="file" multiple />
+        </div>
+
+        <div class="fileContainer">
+          <p class="fileText">
+            <span
+              >All semesters mark sheet in a single PDF or docs (file size less
+              than 10MB)</span
+            >
+          </p>
+          <input type="file" multiple />
+        </div>
+
+        <div class="buttonContainer">
+          <button class="button"><a href="form2.html">Back</a></button>
+          <button class="button" type="submit" onclick="formData3()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

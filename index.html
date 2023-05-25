@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration</header>
+
+      <form id="contactForm" onsubmit="event.preventDefault()">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Personal Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="FullName"
+                  >FULL Name<span class="Required">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  id="fullName"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="DateOfBirth"
+                  >Date of Birth<span class="Required">*</span></label
+                >
+                <input
+                  type="date"
+                  placeholder="Enter birth date"
+                  id="dateOfBirth"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name">Email<span class="Required">*</span></label>
+                <input type="email" placeholder="Enter your email" id="email" />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Father's Name<span class="Required">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter your fathers name"
+                  id="fathersName"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Mother's Name<span class="Required">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter your mothers name"
+                  id="mothersName"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name">Gender<span class="Required">*</span></label>
+                <input
+                  type="text"
+                  placeholder="Enter your gender"
+                  id="gender"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name"
+                  >Nationality<span class="Required">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter your nationality"
+                  id="nationality"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Home Address<span class="Required">*</span></label
+                >
+                <input
+                  type="text"
+                  placeholder="Enter home address"
+                  id="homeAddress"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name">City<span class="Required">*</span></label>
+                <input type="text" placeholder="Enter City" id="city" />
+              </div>
+
+              <div class="input-field">
+                <label for="name">Country<span class="Required">*</span></label>
+                <input type="text" placeholder="Enter Country" id="country" />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Telephone - Home<span class="Required">*</span></label
+                >
+                <input
+                  type="number"
+                  placeholder="Enter your telephone - home"
+                  id="telephoneHome"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Telephone - Mobile<span class="Required">*</span></label
+                >
+                <input
+                  type="number"
+                  placeholder="Enter your telephone - mobile"
+                  id="telephoneMobile"
+                />
+              </div>
+            </div>
+
+            <button type="submit" class="nextBtn" onclick="formData1()">
+              <span class="btnText"><a href="form2.html">Next</a></span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
