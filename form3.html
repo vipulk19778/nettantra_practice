@@ -19,21 +19,21 @@
           <p class="fileText">
             <span>Recent passport size photograph (image size 4MB)</span>
           </p>
-          <input type="file" multiple />
+          <input type="file" multiple id="photo" />
         </div>
 
         <div class="fileContainer">
           <p class="fileText">
             <span>HSC mark sheet (image, PDF or docs size 4MB)</span>
           </p>
-          <input type="file" multiple />
+          <input type="file" multiple id="hsc_marksheet" />
         </div>
 
         <div class="fileContainer">
           <p class="fileText">
             <span>SSC mark sheet (image, PDF or docs size 4MB)</span>
           </p>
-          <input type="file" multiple />
+          <input type="file" multiple id="ssc_marksheet" />
         </div>
 
         <div class="fileContainer">
@@ -43,12 +43,12 @@
               than 10MB)</span
             >
           </p>
-          <input type="file" multiple />
+          <input type="file" multiple id="all_marksheet" />
         </div>
 
         <div class="buttonContainer">
-          <button class="button"><a href="form2.html">Back</a></button>
-          <button class="button" type="submit" onclick="formData3()">
+          <button class="back"><a href="form2.html">Back</a></button>
+          <button class="submit" type="submit" onclick="formData3()">
             Submit
           </button>
         </div>

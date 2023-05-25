@@ -1,7 +1,7 @@
-const form = document.querySelector("form");
-const nextBtn = form.querySelector(".nextBtn");
-const backBtn = form.querySelector(".backBtn");
-const allInput = form.querySelectorAll(".first input");
+// const form = document.querySelector("form");
+// const nextBtn = form.querySelector(".nextBtn");
+// const backBtn = form.querySelector(".backBtn");
+// const allInput = form.querySelectorAll(".first input");
 
 // nextBtn.addEventListener("click", () => {
 //   allInput.forEach((input) => {
@@ -86,23 +86,17 @@ function formData2() {
 
   //localstorage
 
-  var user_hsc = localStorage.setItem("HSC_Name", hscname);
-  var user_hscboard = localStorage.setItem("HSC_Board", hscboard);
-  var user_hsepercentage = localStorage.setItem(
-    "HSC_Percentage",
-    hscpercentage
-  );
+  var user_hsc = localStorage.setItem("HSC_Name", hsc_name);
+  var user_hscboard = localStorage.setItem("HSC_Board", hsc_board);
+  var user_hsepercentage = localStorage.setItem("HSC_Percentage", hsc_percent);
 
-  var user_ssc = localStorage.setItem("SSC_Name", sscname);
-  var user_sscboard = localStorage.setItem("SSC_Board", sscboard);
-  var user_sscpercentage = localStorage.setItem(
-    "SSC_Percentage",
-    sscpercentage
-  );
+  var user_ssc = localStorage.setItem("SSC_Name", ssc_name);
+  var user_sscboard = localStorage.setItem("SSC_Board", ssc_board);
+  var user_sscpercentage = localStorage.setItem("SSC_Percentage", ssc_percent);
 
   var user_currentlypursuing = localStorage.setItem(
     "Currently_Pursuing",
-    currentlypursuing
+    currentlyPursuing
   );
   var user_currenteducationinstitutionname = localStorage.setItem(
     "Current_Education_Institution_Name",
@@ -113,10 +107,10 @@ function formData2() {
 }
 
 function formData3() {
-  var photo = document.getElementById("photo").document;
-  var hsc_marksheet = document.getElementById("hsc_marksheet").document;
-  var ssc_marksheet = document.getElementById("ssc_marksheet").document;
-  var all_marksheet = document.getElementById("all_marksheet").document;
+  var photo = document.getElementById("photo").value;
+  var hsc_marksheet = document.getElementById("hsc_marksheet").value;
+  var ssc_marksheet = document.getElementById("ssc_marksheet").value;
+  var all_marksheet = document.getElementById("all_marksheet").value;
 
   //localstorage
   var user_photo = localStorage.setItem("Photo", photo);
