@@ -105,16 +105,3 @@ function formData2() {
   var user_overall = localStorage.setItem("Overall_Percent", overallPercent);
   var user_backlogs = localStorage.setItem("Backlogs", cuurentBacklog);
 }
-
-function formData3() {
-  var photo = document.getElementById("photo").value;
-  var hsc_marksheet = document.getElementById("hsc_marksheet").value;
-  var ssc_marksheet = document.getElementById("ssc_marksheet").value;
-  var all_marksheet = document.getElementById("all_marksheet").value;
-
-  //localstorage
-  var user_photo = localStorage.setItem("Photo", photo);
-  var user_hsc_marksheet = localStorage.setItem("HSC_Marksheet", hsc_marksheet);
-  var user_ssc_marksheet = localStorage.setItem("SSC_Marksheet", ssc_marksheet);
-  var user_all_marksheet = localStorage.setItem("All_Marksheet", all_marksheet);
-}

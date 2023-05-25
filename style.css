@@ -103,12 +103,12 @@ form .fields .input-field {
 .input-field input[type="date"]:valid {
   color: #333;
 }
+
 .container form button,
 .nextBtn {
   max-width: 200px;
   width: 180px;
   height: 45px;
-  cursor: pointer;
   border: none;
   outline: none;
   color: #fff;
@@ -145,6 +145,10 @@ form .buttons button,
   color: red;
 }
 
+a {
+  cursor: pointer;
+}
+
 .buttonContainer {
   display: flex;
 }
@@ -166,6 +170,16 @@ form .buttons button,
 .fileText {
   width: 70%;
   margin-right: 5%;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px -10px #f5f4f4;
 }
 
 @media (max-width: 750px) {

@@ -48,13 +48,53 @@
 
         <div class="buttonContainer">
           <button class="back"><a href="form2.html">Back</a></button>
-          <button class="submit" type="submit" onclick="formData3()">
-            Submit
+          <button class="submit" type="submit">
+            <a href="welcome.html">Submit</a>
           </button>
         </div>
       </form>
     </div>
+    <script>
+      var photo = document.getElementById("photo");
+      var hsc_marksheet = document.getElementById("hsc_marksheet");
+      var ssc_marksheet = document.getElementById("ssc_marksheet");
+      var all_marksheet = document.getElementById("all_marksheet");
 
-    <script src="script.js"></script>
+      photo.addEventListener("change", () => {
+        const fr = new FileReader();
+        fr.readAsDataURL(photo.files[0]);
+        fr.addEventListener("load", () => {
+          const url = fr.result;
+          localStorage.setItem("Photo", url);
+        });
+      });
+
+      hsc_marksheet.addEventListener("change", () => {
+        const fr = new FileReader();
+        fr.readAsDataURL(hsc_marksheet.files[0]);
+        fr.addEventListener("load", () => {
+          const url = fr.result;
+          localStorage.setItem("HSC_Marksheet", url);
+        });
+      });
+
+      ssc_marksheet.addEventListener("change", () => {
+        const fr = new FileReader();
+        fr.readAsDataURL(ssc_marksheet.files[0]);
+        fr.addEventListener("load", () => {
+          const url = fr.result;
+          localStorage.setItem("SSC_Marksheet", url);
+        });
+      });
+
+      all_marksheet.addEventListener("change", () => {
+        const fr = new FileReader();
+        fr.readAsDataURL(all_marksheet.files[0]);
+        fr.addEventListener("load", () => {
+          const url = fr.result;
+          localStorage.setItem("All_Marksheet", url);
+        });
+      });
+    </script>
   </body>
 </html>
