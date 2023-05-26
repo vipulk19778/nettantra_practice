@@ -1,33 +1,3 @@
-// const form = document.querySelector("form");
-// const nextBtn = form.querySelector(".nextBtn");
-// const backBtn = form.querySelector(".backBtn");
-// const allInput = form.querySelectorAll(".first input");
-
-// nextBtn.addEventListener("click", () => {
-//   allInput.forEach((input) => {
-//     if (input.value !== "") {
-//       form.classList.add("secActive");
-//     } else {
-//       form.classList.remove("secActive");
-//     }
-//   });
-// });
-
-// backBtn.addEventListener("click", () => form.classList.remove("secActive"));
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const inputs = [];
-//   form.querySelectorAll("input").forEach((input) => {
-//     const { name, value } = input;
-//     inputs.push({ name, value });
-//   });
-//   console.log(inputs);
-//   form.reset();
-// });
-
-// document.getElementById("contactForm").addEventListener("submit", save());
-
 function formData1() {
   var fullName = document.getElementById("fullName").value;
   var dateOfBirth = document.getElementById("dateOfBirth").value;
