@@ -4,138 +4,157 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <form>
-      <div class="form second">
-        <div class="details education">
-          <span class="title">Education Details</span>
+    <div class="container">
+      <header>Education Details</header>
+      <form onsubmit="event.preventDefault()">
+        <div class="form second">
+          <div class="details education">
+            <span class="title">Education Details</span>
 
-          <div class="fields">
-            <div class="input-field">
-              <label for="name"
-                >HSC Institution Name<span class="Required">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="Enter your institution name"
-                id="hsc_name"
-              />
+            <div class="fields">
+              <div class="input-field">
+                <label for="name"
+                  >HSC Institution Name<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter your institution name"
+                  id="hsc_name"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >HSC Board<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter your board"
+                  id="hsc_board"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Score in HSC<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="number"
+                  placeholder="Enter your score"
+                  id="hsc_percent"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >SSC Institution Name<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter institution name"
+                  id="ssc_name"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >SSC Board<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter your board"
+                  id="ssc_board"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Score in SSC<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="number"
+                  placeholder="Enter your score"
+                  id="ssc_percent"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="fields">
+              <div class="input-field">
+                <label for="name"
+                  >Currently Pursuing<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter currently pursuing"
+                  id="currentlyPursuing"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Current Education Institution name<span class="Required"
+                    >*</span
+                  ></label
+                >
+                <input
+                  required
+                  type="text"
+                  placeholder="Enter institution name"
+                  id="currentEducational"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Overall Percentage<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="number"
+                  placeholder="Enter Your Percentage"
+                  id="OverallPercent"
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="name"
+                  >Current Backlogs if any<span class="Required">*</span></label
+                >
+                <input
+                  required
+                  type="number"
+                  placeholder="Enter Current Backlogs"
+                  id="cuurentBacklog"
+                />
+              </div>
             </div>
 
-            <div class="input-field">
-              <label for="name">HSC Board<span class="Required">*</span></label>
-              <input
-                type="text"
-                placeholder="Enter your board"
-                id="hsc_board"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >Score in HSC<span class="Required">*</span></label
-              >
-              <input
-                type="number"
-                placeholder="Enter your score"
-                id="hsc_percent"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >SSC Institution Name<span class="Required">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="Enter institution name"
-                id="ssc_name"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name">SSC Board<span class="Required">*</span></label>
-              <input
-                type="text"
-                placeholder="Enter your board"
-                id="ssc_board"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >Score in SSC<span class="Required">*</span></label
-              >
-              <input
-                type="number"
-                placeholder="Enter your score"
-                id="ssc_percent"
-              />
+            <div class="buttons">
+              <button class="backBtn">
+                <span class="btnText"><a href="index.html">Back</a></span>
+              </button>
+              <button class="nextBtn" type="submit" onclick="formData2()">
+                <span class="btnText"><a href="form3.html">Next</a></span>
+              </button>
             </div>
           </div>
         </div>
-
-        <div>
-          <div class="fields">
-            <div class="input-field">
-              <label for="name"
-                >Currently Pursuing<span class="Required">*</span></label
-              >
-              <input
-                type="text"
-                placeholder="Enter currently pursuing"
-                id="currentlyPursuing"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >Current Education Institution name<span class="Required"
-                  >*</span
-                ></label
-              >
-              <input
-                type="text"
-                placeholder="Enter institution name"
-                id="currentEducational"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >Overall Percentage<span class="Required">*</span></label
-              >
-              <input
-                type="number"
-                placeholder="Enter Your Percentage"
-                id="OverallPercent"
-              />
-            </div>
-
-            <div class="input-field">
-              <label for="name"
-                >Current Backlogs if any<span class="Required">*</span></label
-              >
-              <input
-                type="number"
-                placeholder="Enter Current Backlogs"
-                id="cuurentBacklog"
-              />
-            </div>
-          </div>
-
-          <div class="buttons">
-            <button class="backBtn">
-              <span class="btnText">Back</span>
-            </button>
-            <button class="nextBtn" type="submit" onclick="formData2()">
-              <span class="btnText"><a href="upload.html">Next</a></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

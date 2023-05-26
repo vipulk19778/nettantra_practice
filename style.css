@@ -44,7 +44,6 @@ a {
   height: 3px;
   width: 27px;
   border-radius: 8px;
-  /* background-color: #40f45e; */
   background-color: #d5d0d0;
 }
 .container form {
@@ -58,21 +57,6 @@ a {
   position: absolute;
   background-color: #fff;
   transition: 0.3s ease;
-}
-.container form .form.second {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(100%);
-}
-form.secActive .form.second {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(0);
-}
-form.secActive .form.first {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateX(-100%);
 }
 .container form .title {
   display: block;
@@ -119,23 +103,19 @@ form .fields .input-field {
 .input-field input[type="date"]:valid {
   color: #333;
 }
+
 .container form button,
 .nextBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
   max-width: 200px;
-  width: 100%;
+  width: 180px;
+  height: 45px;
   border: none;
   outline: none;
   color: #fff;
   border-radius: 5px;
   margin: 25px 0;
-  /* background-color: #40f45e; */
   background-color: #563d7c;
   transition: all 0.3s linear;
-  cursor: pointer;
 }
 .container form button .container form .backBtn {
   font-size: 14px;
@@ -164,37 +144,42 @@ form .buttons button,
 .required {
   color: red;
 }
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 45px;
-  max-width: 200px;
-  width: 100%;
-  border: none;
-  outline: none;
-  color: #fff;
-  border-radius: 5px;
-  margin: 25px 0;
-  background-color: #563d7c;
-  transition: all 0.3s linear;
+
+a {
   cursor: pointer;
-  text-decoration: none;
-  margin-right: 10px;
 }
 
 .buttonContainer {
   display: flex;
 }
 
+.back,
+.submit {
+  margin-right: 15px !important;
+  margin-top: 5% !important;
+}
+
 .fileContainer {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+  margin-top: 5%;
 }
 
 .fileText {
-  width: 80%;
+  width: 70%;
+  margin-right: 5%;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px -10px #f5f4f4;
 }
 
 @media (max-width: 750px) {
