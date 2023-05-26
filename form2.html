@@ -144,17 +144,23 @@
             </div>
 
             <div class="buttons">
-              <button class="backBtn">
-                <span class="btnText"><a href="index.html">Back</a></span>
-              </button>
-              <button class="nextBtn" type="submit" onclick="formData2()">
-                <span class="btnText"><a href="form3.html">Next</a></span>
+              <button class="nextBtn" type="submit" id="form2Submit">
+                <span class="btnText">Next</span>
               </button>
             </div>
           </div>
         </div>
       </form>
     </div>
+    <script>
+      const form2Submit = document.getElementById("form2Submit");
+      form2Submit.addEventListener("click", () => {
+        if (formData2()) {
+          const response = confirm("Are you sure you want to submit?");
+          response ? (window.location.href = "form3.html") : null;
+        }
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

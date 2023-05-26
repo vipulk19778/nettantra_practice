@@ -1,33 +1,3 @@
-// const form = document.querySelector("form");
-// const nextBtn = form.querySelector(".nextBtn");
-// const backBtn = form.querySelector(".backBtn");
-// const allInput = form.querySelectorAll(".first input");
-
-// nextBtn.addEventListener("click", () => {
-//   allInput.forEach((input) => {
-//     if (input.value !== "") {
-//       form.classList.add("secActive");
-//     } else {
-//       form.classList.remove("secActive");
-//     }
-//   });
-// });
-
-// backBtn.addEventListener("click", () => form.classList.remove("secActive"));
-
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   const inputs = [];
-//   form.querySelectorAll("input").forEach((input) => {
-//     const { name, value } = input;
-//     inputs.push({ name, value });
-//   });
-//   console.log(inputs);
-//   form.reset();
-// });
-
-// document.getElementById("contactForm").addEventListener("submit", save());
-
 function formData1() {
   var fullName = document.getElementById("fullName").value;
   var dateOfBirth = document.getElementById("dateOfBirth").value;
@@ -62,12 +32,34 @@ function formData1() {
   var user_country = localStorage.setItem("Country", country);
   var user_telephonehome = localStorage.setItem(
     "Telephone_Home",
-    telephonehome
+    telephoneHome
   );
   var user_telephonemobile = localStorage.setItem(
     "Telephone_Mobile",
-    telephonemobile
+    telephoneMobile
   );
+  if (
+    fullName.replace(/\s/g, "").length <= 0 ||
+    dateOfBirth.replace(/\s/g, "").length <= 0 ||
+    email.replace(/\s/g, "").length <= 0 ||
+    fathersName.replace(/\s/g, "").length <= 0 ||
+    mothersName.replace(/\s/g, "").length <= 0 ||
+    gender.replace(/\s/g, "").length <= 0 ||
+    nationality.replace(/\s/g, "").length <= 0 ||
+    homeAddress.replace(/\s/g, "").length <= 0 ||
+    city.replace(/\s/g, "").length <= 0 ||
+    country.replace(/\s/g, "").length <= 0 ||
+    telephoneHome.replace(/\s/g, "").length <= 0 ||
+    telephoneMobile.replace(/\s/g, "").length <= 0
+  ) {
+    alert("Fields can't be empty or can't contain white space");
+    return false;
+  } else {
+    if (telephoneHome.length < 10 || telephoneMobile.length < 10) {
+      alert("Digits of telephone number should be atleast 10 digits.");
+      return false;
+    } else return true;
+  }
 }
 
 function formData2() {
@@ -104,4 +96,20 @@ function formData2() {
   );
   var user_overall = localStorage.setItem("Overall_Percent", overallPercent);
   var user_backlogs = localStorage.setItem("Backlogs", cuurentBacklog);
+
+  if (
+    hsc_name.replace(/\s/g, "").length <= 0 ||
+    hsc_board.replace(/\s/g, "").length <= 0 ||
+    hsc_percent.replace(/\s/g, "").length <= 0 ||
+    ssc_name.replace(/\s/g, "").length <= 0 ||
+    ssc_board.replace(/\s/g, "").length <= 0 ||
+    ssc_percent.replace(/\s/g, "").length <= 0 ||
+    currentlyPursuing.replace(/\s/g, "").length <= 0 ||
+    currentEducational.replace(/\s/g, "").length <= 0 ||
+    overallPercent.replace(/\s/g, "").length <= 0 ||
+    cuurentBacklog.replace(/\s/g, "").length <= 0
+  ) {
+    alert("Fields can't be empty or can't contain white space");
+    return false;
+  } else return true;
 }

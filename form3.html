@@ -47,10 +47,8 @@
         </div>
 
         <div class="buttonContainer">
-          <button class="back"><a href="form2.html">Back</a></button>
-          <button class="submit" type="submit">
-            <a href="welcome.html">Submit</a>
-          </button>
+          <!-- <button class="back" id="form3Back">Back</button> -->
+          <button class="submit" type="submit" id="form3Submit">Submit</button>
         </div>
       </form>
     </div>
@@ -59,6 +57,27 @@
       var hsc_marksheet = document.getElementById("hsc_marksheet");
       var ssc_marksheet = document.getElementById("ssc_marksheet");
       var all_marksheet = document.getElementById("all_marksheet");
+
+      const form3Submit = document.getElementById("form3Submit");
+      form3Submit.addEventListener("click", () => {
+        if (formData3()) {
+          const response = confirm("Are you sure you want to submit the form?");
+          response ? (window.location.href = "welcome.html") : null;
+        } else alert("!!! Files can't be empty.");
+      });
+
+      const formData3 = () => {
+        if (
+          photo.value === "" ||
+          hsc_marksheet.value === "" ||
+          ssc_marksheet.value === "" ||
+          all_marksheet.value === ""
+        ) {
+          return false;
+        } else {
+          return true;
+        }
+      };
 
       photo.addEventListener("change", () => {
         const fr = new FileReader();
