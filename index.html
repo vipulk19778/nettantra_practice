@@ -14,7 +14,7 @@
     <div class="container">
       <header>Registration</header>
 
-      <form id="contactForm" onsubmit="event.preventDefault()">
+      <form name="form1" onsubmit="event.preventDefault()">
         <div class="form first">
           <div class="details personal">
             <span class="title">Personal Details</span>
@@ -79,13 +79,24 @@
               </div>
 
               <div class="input-field">
-                <label for="name">Gender<span class="Required">*</span></label>
-                <input
-                  required
-                  type="text"
-                  placeholder="Enter your gender"
-                  id="gender"
-                />
+                <label for="gender-field"
+                  >Gender<span class="Required">*</span></label
+                >
+                <div class="gender-field">
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    required
+                  />&nbsp;Male
+                  <input
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                  />&nbsp;Female
+                  <input type="radio" name="gender" value="Others" />
+                  &nbsp;Others
+                </div>
               </div>
             </div>
           </div>
@@ -127,35 +138,47 @@
               </div>
 
               <div class="input-field">
-                <label for="name">Country<span class="Required">*</span></label>
-                <input
+                <label for="Country"
+                  >Country<span class="Required">*</span></label
+                >
+
+                <select
                   required
-                  type="text"
-                  placeholder="Enter Country"
+                  name="Country"
                   id="country"
-                />
+                  onchange="countryCode()"
+                >
+                  <option value="">Select Country</option>
+                  <option value="India">India</option>
+                  <option value="US">US</option>
+                  <option value="UK">UK</option>
+                </select>
               </div>
 
-              <div class="input-field">
-                <label for="name"
+              <div class="input-field" style="position: relative">
+                <label for="telephoneHome"
                   >Telephone - Home<span class="Required">*</span></label
                 >
+                <p id="countryCode1"></p>
                 <input
                   required
                   type="number"
-                  placeholder="Enter your telephone - home"
+                  name="telephoneHome"
+                  placeholder="Enter Telephone No."
                   id="telephoneHome"
                 />
               </div>
 
-              <div class="input-field">
-                <label for="name"
+              <div class="input-field" style="position: relative">
+                <label for="telephoneMobile"
                   >Telephone - Mobile<span class="Required">*</span></label
                 >
+                <p id="countryCode2"></p>
                 <input
                   required
                   type="number"
-                  placeholder="Enter your telephone - mobile"
+                  name="telephoneMobile"
+                  placeholder="Enter Mobile No."
                   id="telephoneMobile"
                 />
               </div>
@@ -170,12 +193,50 @@
     </div>
     <script>
       const form1Submit = document.getElementById("form1Submit");
+
       form1Submit.addEventListener("click", () => {
         if (formData1()) {
           const response = confirm("Are you sure you want to submit?");
           response ? (window.location.href = "form2.html") : null;
         }
       });
+
+      const countryCode = () => {
+        const country = document.getElementById("country");
+        const countryCode1 = document.getElementById("countryCode1");
+        const telephoneHome = document.getElementById("telephoneHome");
+        const countryCode2 = document.getElementById("countryCode2");
+
+        if (country.value) {
+          countryCode1.setAttribute(
+            "style",
+            "position: absolute;left: 5px;top: 44%;padding: 2px;width: auto;"
+          );
+          telephoneHome.setAttribute("style", "padding-left:40px;");
+          countryCode2.setAttribute(
+            "style",
+            "position: absolute;left: 5px;top: 44%;padding: 2px;width: auto;"
+          );
+          telephoneMobile.setAttribute("style", "padding-left:40px;");
+        } else {
+          telephoneHome.style.padding = "";
+          telephoneMobile.style.padding = "";
+        }
+
+        if (country.value === "India") {
+          countryCode1.innerHTML = "+91";
+          countryCode2.innerHTML = "+91";
+        } else if (country.value === "US") {
+          countryCode1.innerHTML = "+1";
+          countryCode2.innerHTML = "+1";
+        } else if (country.value === "UK") {
+          countryCode1.innerHTML = "+44";
+          countryCode2.innerHTML = "+44";
+        } else {
+          countryCode1.innerHTML = "";
+          countryCode2.innerHTML = "";
+        }
+      };
     </script>
     <script src="script.js"></script>
   </body>

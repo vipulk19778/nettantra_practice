@@ -83,7 +83,8 @@ form .fields .input-field {
   font-weight: 500;
   color: #2e2e2e;
 }
-.input-field input {
+.input-field input,
+.input-field select {
   outline: none;
   font-size: 14px;
   font-weight: 400;
@@ -94,6 +95,20 @@ form .fields .input-field {
   height: 42px;
   margin: 8px 0;
 }
+
+.input-field .gender-field {
+  display: flex;
+  align-items: center;
+}
+
+.input-field .gender-field input:not(:first-child) {
+  margin-left: 13px;
+}
+
+.input-field .gender-field input:is(:focus, :valid) {
+  box-shadow: none;
+}
+
 .input-field input:is(:focus, :valid) {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
 }
